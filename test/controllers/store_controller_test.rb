@@ -7,8 +7,10 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     # Verify response contains layout, product infomation, and number formatting
     assert_select 'nav.side_nav a', minumum: 4
     assert_select 'main ul.catalog li', 3
+    # Programming Ruby 1.9 is fixture data
     assert_select 'h2', 'Programming Ruby 1.9'
     assert_select '.price', /\$[,\d]+\.\d/
+
   
   end
 end

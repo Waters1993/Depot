@@ -11,8 +11,8 @@ consumer.subscriptions.create("ProductsChannel", {
 
   received(data) {
     const storeElement = document.querySelector("main.store");
-    if (storeElement) {
+    if (storeElement)
+      //prettier-ignore
       storeElement.innerHTML = data.html;
-    }
   },
 });
